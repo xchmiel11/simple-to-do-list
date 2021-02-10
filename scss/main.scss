@@ -1,0 +1,87 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+$main-white: #fafafa;
+$main-black: #151515;
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        width: 80%;
+        background: rgba($main-black, .9);
+        border-radius: 10px;
+        padding: 4rem;
+
+        .input-wrapper {
+            text-align: center;
+
+            input {
+                border: 2px solid $main-white;
+                background: none;
+                padding: 1rem;
+                color: #fafafa;
+                outline: none;
+                font-size: 1.2rem;
+                width: 40%;
+                border-radius: 4px 0 0 4px;
+
+                &::placeholder {
+                    color: $main-white;
+                }
+            }
+
+            .add-btn {
+                background: $main-white;
+                border: 2px solid $main-white;
+                font-size: 1.2rem;
+                padding: 1rem 2rem;
+                outline: none;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+            }
+        }
+
+        .list-wrapper {
+            padding-top: 4rem;
+
+            h1 {
+                color: $main-white;
+            }
+
+            .list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                &-item {
+                    background: $main-white;
+                    color: $main-black;
+                    font-size: 1.3rem;
+                    border-radius: 4px;
+                    margin: 1.5rem 0;
+                    padding: 1.5rem;
+                    font-weight: 600;
+                    position: relative;
+
+                    .close {
+                        position: absolute;
+                        right: 2%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
